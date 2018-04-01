@@ -90,19 +90,19 @@ body {
     margin-bottom: 3rem; }
 
 .center-text {
-  text-align: center; }
+  text-align: center !important; }
 
 .mb-s {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem !important; }
 
 .mb-m {
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem !important; }
 
 .mb-l {
-  margin-bottom: 8rem; }
+  margin-bottom: 8rem !important; }
 
 .mt-l {
-  margin-top: 8rem; }
+  margin-top: 8rem !important; }
 
 .bg-video {
   position: absolute;
@@ -111,13 +111,14 @@ body {
   width: 100%;
   height: 100%;
   opacity: .15;
-  z-index: -1; }
+  z-index: -1;
+  overflow: hidden; }
   .bg-video__content {
     width: 100%;
     height: 100%;
     object-fit: cover; }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1.6rem;
@@ -125,7 +126,9 @@ body {
   display: inline-block;
   border-radius: 10rem;
   transition: transform .4s ease-out;
-  position: relative; }
+  position: relative;
+  outline: none;
+  border: none; }
 
 .btn:hover {
   transform: translateY(-3px);
@@ -134,7 +137,7 @@ body {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
 
-.btn:active {
+.btn:active, .btn:focus {
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
@@ -322,6 +325,84 @@ body {
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.05); }
 
+.form__radio-input {
+  display: none; }
+
+.form__group:not(:last-child) {
+  margin-bottom: 2rem; }
+
+.form__input {
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: inherit;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 90%;
+  display: block;
+  transition: all .3s ease-out; }
+  .form__input:focus {
+    outline: none;
+    border-bottom: 3px solid #55c57a;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1); }
+    .form__input:focus:invalid {
+      border-bottom: 3px solid #ff7730; }
+  .form__input:invalid {
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1); }
+  .form__input::placeholder, .form__input::-ms-input-placeholder {
+    color: #999;
+    opacity: 1; }
+
+.form__label {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all .2s ease-out; }
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
+
+.form__radio-group {
+  width: 49%;
+  display: inline-block; }
+
+.form__radio-label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding-left: 4rem;
+  position: relative; }
+
+.form__radio-button {
+  height: 3rem;
+  width: 3rem;
+  display: inline-block;
+  border: 0.5rem solid #55c57a;
+  border-radius: 50%;
+  position: absolute;
+  top: -0.4rem;
+  left: 0; }
+  .form__radio-button::after {
+    content: "";
+    width: 1.2rem;
+    height: 1.2rem;
+    display: block;
+    background-color: #55c57a;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; }
+
+.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+  opacity: 1; }
+
 .story {
   background-color: rgba(255, 255, 255, 0.6);
   width: 75%;
@@ -442,3 +523,16 @@ div[class^="col-"] {
 .section-stories {
   padding: 15rem 0;
   position: relative; }
+
+.section-book {
+  padding: 15rem;
+  background-image: linear-gradient(to bottom right, #7ed56f, #28b485); }
+
+.book {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
+  .book__form {
+    width: 51%;
+    padding: 6rem; }
