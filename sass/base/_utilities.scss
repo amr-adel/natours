@@ -1,7 +1,19 @@
 .center-text { text-align: center !important; }
 
 .mb-s { margin-bottom: 1.5rem !important; }
-.mb-m { margin-bottom: 4rem !important; }
-.mb-l { margin-bottom: 8rem !important; }
+.mb-m {
+    margin-bottom: 4rem !important;
+    
+    @include respond(tab-port) {
+        margin-bottom: 3rem !important;
+    }
+}
+.mb-l {
+    margin-bottom: 8rem !important;
+
+    @include respond(tab-port) {
+        margin-bottom: 5rem !important;
+    }
+}
 
 .mt-l { margin-top: 8rem !important; }

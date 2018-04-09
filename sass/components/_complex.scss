@@ -30,6 +30,25 @@
             outline: 2rem solid $col-prim;
             z-index: 11;
         }
+    
+        @include respond(phone) {
+            width: 40%;
+            box-shadow: 0 .5rem 2rem rgba($col-black, 0.2);
+
+            &--p1 {
+                top: 0;
+            }
+
+            &--p2 {
+                top: 0;
+            }
+
+            &--p3 {
+                top: -1rem;
+                left: 30%;
+            }
+
+         }
     }
 
     &:hover &__photo:not(:hover) {

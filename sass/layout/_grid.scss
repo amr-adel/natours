@@ -1,6 +1,19 @@
 .row {
     max-width: #{$grid-width};
-    margin: #{$vertical-gap} auto;
+    margin: 0 auto;
+
+    &:not(:last-child) {
+        margin-bottom: $vertical-gap;
+
+        @include respond(tab-port) {
+            margin-bottom: $vertical-gap-s;
+        }
+    }
+
+    @include respond(tab-land) {
+        // max-width: 80%;
+        padding: 0 3rem;
+    }
     
     &::after {
         content: "";
@@ -9,10 +22,19 @@
     }
 }
 
-div[class^="col-"] {
+[class^="col-"] {
     float: left;
     &:not(:last-child) {
         margin-right: $horizontal-gap;
+
+        @include respond(tab-port) {
+            margin-right: 0;
+            margin-bottom: $vertical-gap-s;
+        }
+    }
+
+    @include respond(tab-port) {
+        width: 100% !important;
     }
 }
 

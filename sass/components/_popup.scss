@@ -83,4 +83,45 @@
         -webkit-hyphens: auto;
         hyphens: auto;
     }
+
+    @include respond(tab-land) {
+        &__close {
+            &:link,
+            &:visited {
+                font-size: 5rem;
+            }
+        }
+    }
+
+    @include respond(tab-port) {
+        &__left {
+            display: block;
+            width: 100%;
+        }
+
+        &__right {
+            display: block;
+            width: 100%;
+        }
+
+        &__img:first-child {
+            display: none;
+        }
+    }
+
+    @include respond(phone) {
+
+        &__content {
+            width: 90%;
+        }
+
+        &__right {
+            padding: 2rem 2rem;
+            text-align: center;
+        }
+
+        &__text {
+            column-count: 1;
+        }
+    }
 }
