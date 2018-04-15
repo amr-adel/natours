@@ -5,9 +5,7 @@
     box-shadow: 0 1rem 4rem rgba($col-black, .15);
     text-align: center;
     font-size: 1.5rem;
-    transition: transform .2s ease-out;
-
-    
+    transition: all .2s ease-out;
 
     &__icon {
         font-size: 6rem;

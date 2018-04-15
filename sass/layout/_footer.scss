@@ -28,10 +28,6 @@
     &__logo {
         width: 15rem;
         height: auto;
-
-        @include respond(phone) {
-            width: 10rem;
-        }
     }
 
     &__navigation {

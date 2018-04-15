@@ -84,9 +84,17 @@
 
                 <div class="col-1-2">
                     <div class="complex">
-                        <img src="img/nat-1-large.jpg" alt="photo 1" class="complex__photo complex__photo--p1">
-                        <img src="img/nat-2-large.jpg" alt="photo 2" class="complex__photo complex__photo--p2">
-                        <img src="img/nat-3-large.jpg" alt="photo 3" class="complex__photo complex__photo--p3">
+                        <img srcset="img/nat-1.jpg 300w,img/nat-1-large.jpg 1000w"
+                        sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, (min-width: 112.5em) 22vw, 300px"
+                        src="img/nat-1-large.jpg" alt="photo 1" class="complex__photo complex__photo--p1">
+
+                        <img srcset="img/nat-2.jpg 300w,img/nat-2-large.jpg 1000w"
+                        sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, (min-width: 112.5em) 22vw, 300px"
+                        src="img/nat-2-large.jpg" alt="photo 2" class="complex__photo complex__photo--p2">
+
+                        <img srcset="img/nat-3.jpg 300w,img/nat-3-large.jpg 1000w"
+                        sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, (min-width: 112.5em) 22vw, 300px"
+                        src="img/nat-3-large.jpg" alt="photo 3" class="complex__photo complex__photo--p3">
                     </div>
                 </div>
             </div>
@@ -396,7 +404,11 @@
 
     <footer class="footer">
         <div class="footer__logo-box">
-            <img src="/img/logo-green-2x.png" alt="Natours logo" class="footer__logo">
+            <picture class="footer__logo">
+                <source media="(max-width: 37.5em)" srcset="/img/logo-green-small-1x.png 1x, /img/logo-green-small-2x.png 2x">
+                <img srcset="/img/logo-green-1x.png 1x, /img/logo-green-2x.png 2x" alt="Natours logo" class="footer__logo">
+            </picture>
+
         </div>
         <div class="row">
             <div class="col-1-2">
