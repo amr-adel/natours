@@ -2,6 +2,8 @@
 
 A modern website for fictitious tours agency.
 
+[![Natours](img/demo.jpg "Natours")](https://amr-adel.github.io/natours/)
+
 ## What is this about?
 
 It's the first of three websites built from scratch through the great [Advanced CSS and Sass: Flexbox, Grid, Animations and More!](https://www.udemy.com/advanced-css-and-sass/) course by Jonas Schmedtmann.
